@@ -533,6 +533,8 @@ suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
 2.5598055while3!=88¬56.a
 ```
 **Muestra de error en terminal en la linea 1**
+<img width="1596" height="282" alt="image" src="https://github.com/user-attachments/assets/b9083a2b-7be8-400b-8e9e-c1da613c3161" />
+
 
 **Ejemplo 3**
 ```python
@@ -567,3 +569,6 @@ resta_normal = 10 - 5    # tk_entero(10) tk_resta tk_entero(5)
 suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
 ```
 **Muestra de tokenizacion de todo el ejemplo**
+
+<img width="1596" height="977" alt="image" src="https://github.com/user-attachments/assets/71b494c1-08a2-4c0a-9ebe-f07250e37691" />
+
