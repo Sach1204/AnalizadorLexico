@@ -495,7 +495,6 @@ Maneja la entrada del programa:
 ### Salida en terminal con varios ejemplos
 **Ejemplo 1**
 ```python
-# Casos específicos basados en las notas del analizador léxico
 # CASO 1: Número decimal 90.00.50 
 # Debe generar: tk_entero(90), tk_punto, tk_entero(00), tk_punto, tk_entero(50)
 valor = 90.00.50
@@ -529,3 +528,42 @@ suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
 **Muestra de error en terminal en la linea 7**
 <img width="1596" height="282" alt="image" src="https://github.com/user-attachments/assets/09a21297-fd79-4f51-884d-4c0f26fe5093" />
 
+**Ejemplo 2**
+```python
+2.5598055while3!=88¬56.a
+```
+**Muestra de error en terminal en la linea 1**
+
+**Ejemplo 3**
+```python
+# CASO 1: Número decimal 90.00.50 
+# Debe generar: tk_entero(90), tk_punto, tk_entero(00), tk_punto, tk_entero(50)
+valor = 90.00.50
+# CASO 2: Error léxico con 1-23948998
+# Debe detectar tk_entero(1) y luego ERROR en el guión (no pegado al número)
+numero_problema = 123948998
+# CASO 3: Palabra reservada "print"
+# Debe aparecer como <print,fila,columna>
+print("Mensaje de prueba")
+# CASO 4: Principio de subcadena más larga
+# Operadores compuestos deben reconocerse completos
+# Comparaciones (subcadena más larga)
+resultado1 = a == b    # tk_igual (no tk_asig + tk_asig)
+resultado2 = x != y    # tk_distinto (no tk_not + tk_asig)  
+resultado3 = m <= n    # tk_menor_igual (no tk_menor + tk_asig)
+resultado4 = p >= q    # tk_mayor_igual (no tk_mayor + tk_asig)
+# Asignaciones compuestas (subcadena más larga)
+contador += 1         # tk_mas_igual (no tk_suma + tk_asig)
+total -= 5           # tk_menos_igual (no tk_resta + tk_asig)
+producto *= 2        # tk_por_igual (no tk_mult + tk_asig)
+division /= 3        # tk_div_igual (no tk_div + tk_asig)
+# División entera y potencia (subcadena más larga)
+cociente = 100 // 7  # tk_div_entera (no tk_div + tk_div)
+potencia = 2 ** 8    # tk_pot (no tk_mult + tk_mult)
+# Números con signo pegado vs separado
+negativo_pegado = -42    # tk_entero(-42)
+positivo_pegado = +15    # tk_entero(+15) 
+resta_normal = 10 - 5    # tk_entero(10) tk_resta tk_entero(5)
+suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
+```
+**Muestra de tokenizacion de todo el ejemplo**
