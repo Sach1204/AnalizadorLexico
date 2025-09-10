@@ -7,6 +7,7 @@ Para la validación de su funcionamiento se implementaron cinco casos de prueba,
 El Proyecto fue elaborado por:
 
 **Samuel Chaves Mora**
+
 **Cristian leonardo Bello Cuesta**
 
 ## 1. Encabezado e imports
