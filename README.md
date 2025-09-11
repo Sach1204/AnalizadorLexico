@@ -1,6 +1,13 @@
 
 # Analizador Léxico para Python
 
+## Proyecto desarrolado por:
+
+**Samuel Chaves Mora**
+
+**Cristian Bello Cuesta**
+
+
 Un analizador léxico completo que procesa código fuente Python y genera tokens según especificaciones académicas. El analizador procesa todo el código válido hasta encontrar un error léxico, mostrando los tokens procesados antes de reportar el error.
 
 ## Características Principales
@@ -254,4 +261,6 @@ Maneja:
 python analizadorlexico.py archivo.py
 ```
 
-### Ejemplo de Entrada
+### Ejemplo de Entrada y Salida 
+
+
