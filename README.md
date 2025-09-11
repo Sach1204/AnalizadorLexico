@@ -262,4 +262,100 @@ python analizadorlexico.py archivo.py
 
 ### Ejemplo de Entrada y Salida 
 
+**Ejemplo 1**
+```txt
+# Casos específicos basados en las notas del analizador léxico
+# CASO 1: Número decimal 90.00.50 
+# Debe generar: tk_entero(90), tk_punto, tk_entero(00), tk_punto, tk_entero(50)
+valor = 90.00.50
+# CASO 2: Error léxico con 1-23948998
+# Debe detectar tk_entero(1) y luego ERROR en el guión (no pegado al número)
+numero_problema = 1-23948998
+# CASO 3: Palabra reservada "print"
+# Debe aparecer como <print,fila,columna>
+print("Mensaje de prueba")
+# CASO 4: Principio de subcadena más larga
+# Operadores compuestos deben reconocerse completos
+# Comparaciones (subcadena más larga)
+resultado1 = a == b    # tk_igual (no tk_asig + tk_asig)
+resultado2 = x != y    # tk_distinto (no tk_not + tk_asig)  
+resultado3 = m <= n    # tk_menor_igual (no tk_menor + tk_asig)
+resultado4 = p >= q    # tk_mayor_igual (no tk_mayor + tk_asig)
+# Asignaciones compuestas (subcadena más larga)
+contador += 1         # tk_mas_igual (no tk_suma + tk_asig)
+total -= 5           # tk_menos_igual (no tk_resta + tk_asig)
+producto *= 2        # tk_por_igual (no tk_mult + tk_asig)
+division /= 3        # tk_div_igual (no tk_div + tk_asig)
+# División entera y potencia (subcadena más larga)
+cociente = 100 // 7  # tk_div_entera (no tk_div + tk_div)
+potencia = 2 ** 8    # tk_pot (no tk_mult + tk_mult)
+# Números con signo pegado vs separado
+negativo_pegado = -42    # tk_entero(-42)
+positivo_pegado = +15    # tk_entero(+15) 
+resta_normal = 10 - 5    # tk_entero(10) tk_resta tk_entero(5)
+suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
+
+```
+
+**Muestra de como sale en terminal**
+
+<img width="1660" height="342" alt="image" src="https://github.com/user-attachments/assets/d1172f0d-a985-4361-96d5-81362ed555d3" />
+
+**Ejemplo 2**
+
+```txt
+2.5598055while3!=88¬56.a
+```
+**Muestra de comos sale en terminal**
+
+<img width="1660" height="182" alt="image" src="https://github.com/user-attachments/assets/069c2d11-554b-4717-8efe-213f399c81c7" />
+
+**Ejemplo 3**
+
+```txt
+# Casos específicos basados en las notas del analizador léxico
+# CASO 1: Número decimal 90.00.50 
+# Debe generar: tk_entero(90), tk_punto, tk_entero(00), tk_punto, tk_entero(50)
+valor = 90.00.50
+# CASO 2: Error léxico con 1-23948998
+# Debe detectar tk_entero(1) y luego ERROR en el guión (no pegado al número)
+numero_problema = 123948998
+# CASO 3: Palabra reservada "print"
+# Debe aparecer como <print,fila,columna>
+print("Mensaje de prueba")
+# CASO 4: Principio de subcadena más larga
+# Operadores compuestos deben reconocerse completos
+# Comparaciones (subcadena más larga)
+resultado1 = a == b    # tk_igual (no tk_asig + tk_asig)
+resultado2 = x != y    # tk_distinto (no tk_not + tk_asig)  
+resultado3 = m <= n    # tk_menor_igual (no tk_menor + tk_asig)
+resultado4 = p >= q    # tk_mayor_igual (no tk_mayor + tk_asig)
+# Asignaciones compuestas (subcadena más larga)
+contador += 1         # tk_mas_igual (no tk_suma + tk_asig)
+total -= 5           # tk_menos_igual (no tk_resta + tk_asig)
+producto *= 2        # tk_por_igual (no tk_mult + tk_asig)
+division /= 3        # tk_div_igual (no tk_div + tk_asig)
+# División entera y potencia (subcadena más larga)
+cociente = 100 // 7  # tk_div_entera (no tk_div + tk_div)
+potencia = 2 ** 8    # tk_pot (no tk_mult + tk_mult)
+# Números con signo pegado vs separado
+negativo_pegado = -42    # tk_entero(-42)
+positivo_pegado = +15    # tk_entero(+15) 
+resta_normal = 10 - 5    # tk_entero(10) tk_resta tk_entero(5)
+suma_normal = 20 + 3     # tk_entero(20) tk_suma tk_entero(3)
+```
+
+**Mustra de como sale en terminal**
+<img width="1660" height="965" alt="image" src="https://github.com/user-attachments/assets/977e2e5d-6069-4ef7-afb0-ce065dad72bf" />
+
+**Ejemplo 4**
+
+```python
+#
+```
+**Muestra de como sale en terminal**
+<img width="1660" height="61" alt="image" src="https://github.com/user-attachments/assets/68c38437-046e-4b2e-9f5f-ccdf5e397ce0" />
+
+
+
 
