@@ -251,7 +251,7 @@ Maneja:
 
 ### Ejecución
 ```bash
-python analizador_lexico.py archivo.py
+python analizadorlexico.py archivo.py
 ```
 
 ### Ejemplo de Entrada
