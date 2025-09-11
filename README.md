@@ -7,8 +7,7 @@
 
 **Cristian Bello Cuesta**
 
-
-Un analizador léxico completo que procesa código fuente Python y genera tokens según especificaciones académicas. El analizador procesa todo el código válido hasta encontrar un error léxico, mostrando los tokens procesados antes de reportar el error.
+Este proyecto consiste en el desarrollo de un analizador léxico en Python, basado en la construcción de autómatas finitos deterministas (AFD). El analizador tiene como finalidad identificar y clasificar los componentes léxicos de cadenas de entrada, determinando si cumplen con las reglas establecidas para el lenguaje definido.
 
 ## Características Principales
 
